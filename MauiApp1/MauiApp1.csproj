@@ -38,7 +38,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-	
+
 
 	<ItemGroup>
 		<!-- App Icon -->
@@ -59,7 +59,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Aptabase.Maui" Version="0.0.8" />
 		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.3" />
 		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.3" />
 		<PackageReference Include="Microsoft.AppCenter.Distribute" Version="5.0.3" />

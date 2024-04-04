@@ -56,13 +56,17 @@ namespace MauiApp1
         {
             base.OnStart();
 
+            AppCenter.LogLevel = LogLevel.Verbose;
+
+            Distribute.SetEnabledAsync(true);
             Distribute.SetEnabledForDebuggableBuild(true);
+            
 
             Distribute.ReleaseAvailable = OnReleaseAvailable;
             Distribute.NoReleaseAvailable = OnNoReleaseAvailable;
 
             // Initialize App Center SDK
-            AppCenter.Start("android=ca055c3e-25d8-4d6b-93a1-1e411558b73c", typeof(Distribute), typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("android=ca055c3e-25d8-4d6b-93a1-1e411558b73c", typeof(Distribute));
 
         }
     }
